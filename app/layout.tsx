@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 
 import "./globals.css";
+import Link from "next/link";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -23,7 +24,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable}`}>
-        <header className="fixed top-0 left-0"></header>
+        <header className="fixed w-full top-0 left-0 z-[100] bg-white">
+          <div className="max-w-screen-xl m-auto">
+            <div className="flex justify-between items-center">
+              <div className="flex-1 font-bold text-7xl cursor-pointer text-blue-950 py-2">
+                <Link href="/">UNICORN</Link>
+              </div>
+              <div className="shrink flex gap-16 justify-center items-center">
+                <Link href="/">HOME</Link>
+                <Link href="/">MAGICAL DOPAMINE</Link>
+                <Link href="/">CONTACT US</Link>
+              </div>
+            </div>
+          </div>
+        </header>
         <div className="h-screen w-screen overflow-auto">{children}</div>
       </body>
     </html>
