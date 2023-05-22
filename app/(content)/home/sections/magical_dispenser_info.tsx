@@ -1,7 +1,7 @@
 import { FantasyHeader } from "@/app/components/fantasy_header";
 import { NextFont } from "next/dist/compiled/@next/font";
 
-export function MagicalDispenserInfo({ font }: { font: NextFont }):React.JSX.Element {
+export function MagicalDispenserInfo({ font }: { font: NextFont }): React.JSX.Element {
   return <section className="bg-gradient-to-r from-blue-200 to-violet-300 text-center p-8">
     <div className="max-w-screen-xl m-auto relative">
       <div className="bg-white/20 rounded w-full p-8 lg:p-20 flex lg:flex-row flex-col gap-8 justify-center items-stretch">

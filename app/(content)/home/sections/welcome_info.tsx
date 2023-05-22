@@ -1,14 +1,21 @@
+"use client"
 import { FantasyHeader } from "@/app/components/fantasy_header";
+import { motion, useInView } from "framer-motion";
 import { NextFont } from "next/dist/compiled/@next/font";
+import { useRef } from "react";
 
 export function WelcomeInfo({ font }: { font: NextFont }): React.JSX.Element {
+  const sectionRef = useRef<HTMLElement>(null)
+  const isInView = useInView(sectionRef, { once: false});
   return (
-    <section className="bg-violet-200 text-white text-center p-8">
+    <section className="bg-violet-200 text-white text-center p-8" ref={sectionRef}>
       <div className="max-w-screen-xl m-auto">
-        <FantasyHeader
-          text="Welcome to Unicorn"
-          font={font}
-        />
+        <div className={``}>
+          <FantasyHeader
+            text="Welcome to Unicorn"
+            font={font}
+          />
+        </div>
         <p className="leading-normal text-[#E74C3C] mt-4">
           Whenever there&#39;s toilet paper, there will be period products.
         </p>
