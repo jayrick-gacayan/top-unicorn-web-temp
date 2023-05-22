@@ -1,12 +1,17 @@
 import { FantasyHeader } from "@/app/components/fantasy_header";
 import { NextFont } from "next/dist/compiled/@next/font";
+import Image from "next/image";
+
+import QRCodeDopamine from "@/public/images/unicorn/qr_code_dopamine.png"
 
 export function QRCodeInstructionInfo({ font }: { font: NextFont }): React.JSX.Element {
   return (<section className="bg-white text-center p-8">
     <div className="max-w-screen-xl m-auto">
       <div className="flex lg:flex-row flex-col gap-16 items-stretch">
-        <div className="flex-none h-56 lg:h-auto w-full lg:w-56 bg-black/5">
-          Image holder
+        <div className="flex-none h-56 lg:h-auto w-full lg:w-56">
+          <Image alt="magical-dopamine-qr-code" 
+            src={QRCodeDopamine} 
+            className="object-fill w-full h-auto"/>
         </div>
         <div className="flex-1 w-auto">
           <FantasyHeader

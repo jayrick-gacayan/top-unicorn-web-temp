@@ -6,12 +6,14 @@ import { MagicalDispenserInfo } from "./sections/magical_dispenser_info";
 
 import UnicornImageOne from "../../../public/images/unicorn/image_one.png"
 import { QuestMessageInfo } from "./sections/quest_message_info";
+import { useInView } from "framer-motion";
 const lobster = Lobster({
   weight: "400",
   display: "swap",
 });
 
 export default function Home(): React.JSX.Element {
+  
   return (
     <>
       <div
@@ -32,7 +34,7 @@ export default function Home(): React.JSX.Element {
            `url('./images/unicorn/image_one.png')`,
         }}
         className="w-full h-full bg-fixed bg-no-repeat bg-center bg-cover"
-      ></div>
+      />
       <QuestMessageInfo font={lobster} />
     </>
   );
