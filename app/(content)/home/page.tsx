@@ -7,6 +7,7 @@ import { MagicalDispenserInfo } from "./sections/magical_dispenser_info";
 import UnicornImageOne from "../../../public/images/unicorn/image_one.png"
 import { QuestMessageInfo } from "./sections/quest_message_info";
 import { useInView } from "framer-motion";
+import { QRCodeInstructionInfo } from "./sections/qr_code_instruction_info";
 const lobster = Lobster({
   weight: "400",
   display: "swap",
@@ -27,6 +28,7 @@ export default function Home(): React.JSX.Element {
       <MagicalOfferInfo font={lobster} />
       <VideoHomeMedia />
       <MagicalDispenserInfo font={lobster} />
+      <QRCodeInstructionInfo font={lobster} />
 
       <div
         style={{
